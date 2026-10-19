@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>捷安片簾｜價格調整公告</title>
+<meta name="description" content="捷安片簾自 2026 年 11 月 1 日起全面商品價格調整 10% 公告">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;900&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f1e8;
+    --paper-2:#efe7da;
+    --card:#fffdf9;
+    --ink:#3b3530;
+    --ink-soft:#6f665d;
+    --oak:#a07c55;
+    --oak-deep:#7a5a3a;
+    --sage:#8a9a83;
+    --line:#ddd2c2;
+    --accent-bg:#f3ebdf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(160,124,85,.08), transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(138,154,131,.10), transparent 45%);
+    color:var(--ink);
+    font-family:"Noto Sans TC",system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.9;
+    letter-spacing:.04em;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* 片簾意象：頂部垂直布片線條 */
+  .panels{
+    position:fixed;inset:0 0 auto 0;height:6px;
+    background:repeating-linear-gradient(90deg,var(--oak) 0 60px,var(--paper-2) 60px 64px,var(--sage) 64px 124px,var(--paper-2) 124px 128px);
+    opacity:.75;z-index:5;
+  }
+
+  .wrap{max-width:820px;margin:0 auto;padding:72px 24px 64px}
+  @media (max-width:600px){.wrap{padding:52px 16px 48px}}
+
+  /* 滑入動畫 */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.from-left{transform:translateX(-30px)}
+  .reveal.from-right{transform:translateX(30px)}
+  .reveal.show{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* 頁首 */
+  header{text-align:center;margin-bottom:48px}
+  .eyebrow{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.05rem;color:var(--oak);letter-spacing:.18em;
+  }
+  .brand{
+    font-family:"Noto Serif TC",serif;font-weight:900;
+    font-size:clamp(3rem,11vw,5.6rem);
+    line-height:1.15;letter-spacing:.22em;
+    color:var(--ink);margin:10px 0 4px;
+    padding-left:.22em; /* 平衡字距 */
+  }
+  .brand-en{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1rem;letter-spacing:.5em;color:var(--ink-soft);text-transform:uppercase;
+    padding-left:.5em;
+  }
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px auto 0;color:var(--oak)}
+  .divider span{display:block;width:64px;height:1px;background:var(--line)}
+  .divider i{font-style:normal;font-size:.8rem}
+
+  .title{
+    font-family:"Noto Serif TC",serif;font-weight:600;
+    font-size:clamp(1.5rem,4.6vw,2.1rem);letter-spacing:.3em;margin-top:26px;padding-left:.3em;
+  }
+  .date-tag{
+    display:inline-block;margin-top:14px;padding:4px 18px;border:1px solid var(--line);border-radius:999px;
+    font-size:.9rem;color:var(--ink-soft);background:var(--card)
+  }
+
+  /* 信件本體 */
+  .letter{
+    background:var(--card);border:1px solid var(--line);border-radius:4px;
+    padding:48px 52px;position:relative;
+    box-shadow:0 1px 0 #fff inset, 0 18px 40px -28px rgba(80,60,40,.35);
+  }
+  .letter::before{
+    content:"";position:absolute;left:0;top:28px;bottom:28px;width:3px;background:linear-gradient(var(--oak),var(--sage));border-radius:2px;
+  }
+  @media (max-width:600px){.letter{padding:32px 22px}}
+  .salute{font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.12rem;margin-bottom:18px}
+  .letter p{margin-bottom:1.1em;color:var(--ink);text-align:justify}
+  .letter p.soft{color:var(--ink-soft)}
+
+  /* 重點 */
+  .key{
+    display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:34px 0;
+  }
+  @media (max-width:600px){.key{grid-template-columns:1fr}}
+  .key-item{
+    background:var(--accent-bg);border-radius:4px;padding:22px 22px 20px;text-align:center;
+  }
+  .key-label{font-size:.85rem;color:var(--ink-soft);letter-spacing:.2em}
+  .key-value{
+    font-family:"Noto Serif TC",serif;font-weight:900;color:var(--oak-deep);
+    font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.4;letter-spacing:.06em;margin-top:4px
+  }
+  .key-value small{font-size:.5em;font-weight:600;color:var(--ink-soft);margin-left:4px}
+
+  h3{
+    font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.15rem;letter-spacing:.2em;
+    margin:36px 0 14px;display:flex;align-items:center;gap:12px
+  }
+  h3::before{content:"";width:18px;height:1px;background:var(--oak)}
+
+  .exempt{list-style:none;border-top:1px solid var(--line)}
+  .exempt li{
+    display:flex;gap:16px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line)
+  }
+  .exempt .no{font-family:"Cormorant Garamond",serif;font-size:1.3rem;color:var(--oak);min-width:28px}
+  .exempt b{font-weight:500}
+  .exempt .note{display:block;font-size:.9rem;color:var(--ink-soft)}
+
+  /* 按鈕 */
+  .cta{text-align:center;margin:40px 0 10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:15px 34px;border-radius:2px;text-decoration:none;
+    background:var(--ink);color:var(--paper);font-size:1rem;letter-spacing:.2em;
+    transition:background .3s ease, transform .3s ease, box-shadow .3s ease;
+    box-shadow:0 10px 24px -14px rgba(59,53,48,.7)
+  }
+  .btn:hover{background:var(--oak-deep);transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px;transition:transform .3s ease}
+  .btn:hover svg{transform:translateX(4px)}
+  .cta-note{font-size:.85rem;color:var(--ink-soft);margin-top:12px}
+
+  .sign{text-align:right;margin-top:40px;font-family:"Noto Serif TC",serif}
+  .sign .co{font-weight:900;font-size:1.35rem;letter-spacing:.2em}
+  .sign .d{font-size:.9rem;color:var(--ink-soft);font-family:"Noto Sans TC",sans-serif}
+
+  /* 引言 */
+  .quote{
+    text-align:center;margin:56px auto 0;max-width:560px;
+    font-family:"Noto Serif TC",serif;font-weight:300;color:var(--ink-soft);font-size:1.05rem;line-height:2.1
+  }
+  .quote em{display:block;font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--oak);line-height:1;font-style:normal}
+
+  footer{text-align:center;margin-top:48px;font-size:.85rem;color:var(--ink-soft)}
+  footer a{color:var(--oak-deep);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{border-color:var(--oak)}
+</style>
+</head>
+<body>
+<div class="panels" aria-hidden="true"></div>
+
+<main class="wrap">
+  <header>
+    <div class="eyebrow reveal">Notice · Price Adjustment</div>
+    <h1 class="brand reveal">捷安片簾</h1>
+    <div class="brand-en reveal">Home Desyne</div>
+    <div class="divider reveal" aria-hidden="true"><span></span><i>◆</i><span></span></div>
+    <h2 class="title reveal">價格調整公告</h2>
+    <div class="date-tag reveal">2026 年 11 月 1 日起生效</div>
+  </header>
+
+  <article class="letter reveal">
+    <p class="salute">親愛的全省經銷夥伴、業務同仁 您好：</p>
+
+    <p>感謝各位長久以來對捷安片簾的支持與信賴。一路走來，因為有您的陪伴，捷安片簾才能走進更多家庭，讓空間隨著生活自在變化。</p>
+
+    <p>近年來原物料、布料、五金及運輸成本持續上揚，本公司雖已盡力吸收、穩定價格多年，為維持一貫的產品品質與服務水準，經審慎評估後，決定自 <b>2026 年 11 月 1 日起</b>，全面商品價格調整如下：</p>
+
+    <div class="key">
+      <div class="key-item reveal from-left">
+        <div class="key-label">生效日期</div>
+        <div class="key-value">11/1<small>起</small></div>
+      </div>
+      <div class="key-item reveal from-right">
+        <div class="key-label">調整幅度</div>
+        <div class="key-value">+10<small>%</small></div>
+      </div>
+    </div>
+
+    <h3 class="reveal">不在本次調整範圍</h3>
+    <ul class="exempt">
+      <li class="reveal from-left">
+        <span class="no">01</span>
+        <span><b>單價 100 元以下之零件</b><span class="note">維持現行價格不變</span></span>
+      </li>
+      <li class="reveal from-left">
+        <span class="no">02</span>
+        <span><b>P10 幾何白、P12 柔雪白 布片</b><span class="note">已於 10 月份完成調整，本次不再調漲</span></span>
+      </li>
+    </ul>
+
+    <h3 class="reveal">價格試算表</h3>
+    <p class="reveal">各品項調整後之價格，已整理於線上試算表，提供各位夥伴查詢與報價參考：</p>
+
+    <div class="cta reveal">
+      <a class="btn" href="https://docs.google.com/spreadsheets/d/1H8w_3IXG7Mep-CH5SOCgcget1FZEftK1/edit?usp=sharing&amp;ouid=103503511768352973127&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">
+        開啟價格試算表
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="cta-note">Google 試算表・可直接線上檢視</div>
+    </div>
+
+    <p class="soft reveal" style="margin-top:28px">此次調整造成各位的不便，敬請見諒。若對新價格或報價有任何疑問，歡迎隨時與本公司業務同仁聯繫，我們將竭誠為您服務。未來捷安片簾也將持續精進產品與服務，與各位夥伴攜手成長。</p>
+
+    <p class="reveal">敬祝 商祺</p>
+
+    <div class="sign reveal">
+      <div class="co">捷安片簾</div>
+      <div class="d">捷安股份有限公司　敬啟</div>
+      <div class="d">2026 年 10 月</div>
+    </div>
+  </article>
+
+  <div class="quote reveal">
+    <em>“</em>
+    家應隨生活而變，而不是被牆壁限制。
+  </div>
+
+  <footer class="reveal">
+    <a href="https://www.homedesyne.com/pages/panel-blinds-fabric" target="_blank" rel="noopener">www.homedesyne.com</a>
+  </footer>
+</main>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('show')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('show'); io.unobserve(en.target); }
+      });
+    },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e,i){
+      e.style.transitionDelay = (e.closest('header') ? i*0.12 : 0.05) + 's';
+      io.observe(e);
+    });
+  })();
+</script>
+</body>
+</html>
